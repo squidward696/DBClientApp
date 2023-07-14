@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Sphere?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateApptController">
+    <children>
+        <Sphere blendMode="RED" layoutX="60.0" layoutY="60.0" radius="50" />
+        <Label layoutX="60.0" layoutY="41.0" prefHeight="26.0" prefWidth="300.0" text="Global Consulting Scheduling" underline="true">
+            <font>
+                <Font name="Phosphate Inline" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="139.0" layoutY="73.0" text="Update Appointment:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="40.0" layoutY="131.0" text="Title:" />
+        <Label layoutX="40.0" layoutY="171.0" text="Description:" />
+        <Label layoutX="40.0" layoutY="211.0" text="Location:" />
+        <Label layoutX="40.0" layoutY="251.0" text="Type:" />
+        <Label layoutX="40.0" layoutY="291.0" text="Start:" />
+        <Label layoutX="40.0" layoutY="331.0" text="Duration:" />
+        <Label layoutX="345.0" layoutY="171.0" text="Customer ID:" />
+        <Label layoutX="351.0" layoutY="211.0" text="User ID:" />
+        <Label layoutX="351.0" layoutY="251.0" text="Contact:" />
+        <TextField fx:id="titleTxtFld" layoutX="125.0" layoutY="126.0" prefWidth="200.0" />
+        <TextField fx:id="descriptionTxtFld" layoutX="125.0" layoutY="166.0" prefWidth="200.0" />
+        <TextField fx:id="locationTxtFld" layoutX="125.0" layoutY="206.0" prefWidth="200.0" />
+        <ComboBox fx:id="typeComboBox" layoutX="125.0" layoutY="246.0" prefWidth="200.0" promptText="Select Type" />
+        <DatePicker fx:id="startDate" layoutX="125.0" layoutY="286.0" prefWidth="200.0" />
+        <Button layoutX="351.0" layoutY="366.0" mnemonicParsing="false" onAction="#updateHandler" prefWidth="200.0" style="-fx-background-color: cadetblue;" text="Update" />
+        <Button layoutX="125.0" layoutY="366.0" mnemonicParsing="false" onAction="#cancelHandler" prefWidth="200.0" style="-fx-background-color: palevioletred;" text="Cancel" />
+        <ComboBox fx:id="custIDComboBox" layoutX="431.0" layoutY="166.0" prefHeight="26.0" prefWidth="120.0" promptText="Select Customer ID" />
+        <ComboBox fx:id="userIDComboBox" layoutX="431.0" layoutY="206.0" prefHeight="26.0" prefWidth="120.0" promptText="Select User ID" />
+        <ComboBox fx:id="contactComboBox" layoutX="431.0" layoutY="246.0" prefHeight="26.0" prefWidth="120.0" promptText="Select Contact" />
+        <ComboBox fx:id="startTimeComboBox" layoutX="351.0" layoutY="286.0" prefHeight="26.0" prefWidth="200.0" promptText="Select Time" />
+        <ComboBox fx:id="durationComboBox" layoutX="125.0" layoutY="326.0" prefHeight="26.0" prefWidth="426.0" />
+        <TextField fx:id="apptIDTxtFld" editable="false" layoutX="431.0" layoutY="127.0" opacity="0.5" prefHeight="26.0" prefWidth="120.0" />
+        <Label layoutX="345.0" layoutY="131.0" text="Appt ID:" />
+      <Label layoutX="40.0" layoutY="346.0" text="(minutes)" />
+    </children>
+</AnchorPane>

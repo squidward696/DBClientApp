@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Sphere?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserController">
+    <children>
+        <TableView fx:id="apptTable" layoutX="115.0" layoutY="75.0" prefHeight="425.0" prefWidth="950.0">
+            <columns>
+                <TableColumn fx:id="AppointmentID" prefWidth="54.0" text="Appt. ID" />
+                <TableColumn fx:id="Title" prefWidth="136.0" text="Title" />
+                <TableColumn fx:id="Description" prefWidth="140.0" text="Description" />
+                <TableColumn fx:id="Location" prefWidth="86.0" text="Location" />
+                <TableColumn fx:id="Type" prefWidth="70.0" text="Type" />
+                <TableColumn fx:id="StartDT" prefWidth="133.0" text="Start Date &amp;Time" />
+                <TableColumn fx:id="EndDT" minWidth="0.0" prefWidth="149.0" text="End Date &amp; Time" />
+                <TableColumn fx:id="CustomerID" minWidth="0.0" prefWidth="74.0" text="Customer ID" />
+                <TableColumn fx:id="UserID" minWidth="0.0" prefWidth="45.0" text="User ID" />
+                <TableColumn fx:id="ContactID" prefWidth="62.0" text="Contact ID" />
+            </columns>
+        </TableView>
+        <Button layoutX="20.0" layoutY="135.0" mnemonicParsing="false" onAction="#addApptHandler" prefWidth="80.0" style="-fx-background-color: cadetblue;" text="ADD" />
+        <Button layoutX="20.0" layoutY="175.0" mnemonicParsing="false" onAction="#updateApptHandler" prefWidth="80.0" style="-fx-background-color: goldenrod;" text="UPDATE" />
+        <Button layoutX="20.0" layoutY="215.0" mnemonicParsing="false" onAction="#deleteApptHandler" prefWidth="80.0" style="-fx-background-color: palevioletred;" text="DELETE" />
+        <TableView fx:id="custTable" layoutX="115.0" layoutY="540.0" prefHeight="425.0" prefWidth="950.0">
+            <columns>
+                <TableColumn fx:id="CustomerId" prefWidth="81.0" text="Customer ID" />
+                <TableColumn fx:id="CustomerName" prefWidth="173.0" text="Customer Name" />
+                <TableColumn fx:id="Address" prefWidth="286.0" text="Address" />
+                <TableColumn fx:id="PostalCode" prefWidth="132.0" text="Postal Code" />
+                <TableColumn fx:id="Phone" prefWidth="210.0" text="Phone" />
+                <TableColumn fx:id="DivisionID" prefWidth="67.0" text="Division ID" />
+            </columns>
+        </TableView>
+        <Button layoutX="985.0" layoutY="26.0" mnemonicParsing="false" onAction="#logoutHandler" prefWidth="80.0" style="-fx-background-color: slategrey;" text="LOGOUT" />
+        <Sphere layoutX="50.0" layoutY="50.0" radius="40.0" />
+        <RadioButton fx:id="monthRB" layoutX="31.0" layoutY="295.0" mnemonicParsing="false" onAction="#onRBSort" selected="true" text="Month">
+            <toggleGroup>
+                <ToggleGroup fx:id="schedulingRBtn" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="weekRB" layoutX="31.0" layoutY="325.0" mnemonicParsing="false" onAction="#onRBSort" text="Week" toggleGroup="$schedulingRBtn" />
+      <RadioButton fx:id="allRB" layoutX="31.0" layoutY="355.0" mnemonicParsing="false" onAction="#onRBSort" selected="true" text="All" toggleGroup="$schedulingRBtn" />
+        <Label layoutX="35.0" layoutY="30.0" text="Global Consulting Scheduling" underline="true">
+            <font>
+                <Font name="Phosphate Inline" size="13.0" />
+            </font>
+        </Label>
+        <Button layoutX="20.0" layoutY="605.0" mnemonicParsing="false" onAction="#addCustHandler" prefWidth="80.0" style="-fx-background-color: cadetblue;" text="ADD" />
+        <Button layoutX="20.0" layoutY="645.0" mnemonicParsing="false" onAction="#updateCustHandler" prefWidth="80.0" style="-fx-background-color: goldenrod;" text="UPDATE" />
+        <Button layoutX="20.0" layoutY="685.0" mnemonicParsing="false" onAction="#deleteCustHandler" prefWidth="80.0" style="-fx-background-color: palevioletred;" text="DELETE" />
+        <Label layoutX="650.0" layoutY="50.0" text="Current User:" />
+        <Label fx:id="currentUserTxt" layoutX="730.0" layoutY="50.0" prefHeight="17.0" />
+        <Label layoutX="31.0" layoutY="265.0" prefHeight="17.0" prefWidth="55.0" text="Sort by:" />
+        <Label layoutX="15.0" layoutY="105.0" text="Appointments:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="26.0" layoutY="575.0" text="Customers:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

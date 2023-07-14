@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.Sphere?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.loginController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a1a1a1" height="100.0" layoutX="18.0" layoutY="188.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+        <Sphere blendMode="RED" layoutX="50.0" layoutY="50.0" radius="40.0" />
+        <Label fx:id="globalLabel" layoutX="50.0" layoutY="30.0" prefHeight="26.0" text="Global Consulting Scheduling" underline="true">
+            <font>
+                <Font name="Phosphate Inline" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="signInLabel" layoutX="131.0" layoutY="65.0" prefHeight="26.0" text="Sign-in:">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="usernameLabel" layoutX="20.0" layoutY="110.0" text="Username:" />
+        <Label fx:id="passwordLabel" layoutX="20.0" layoutY="150.0" text="Password:" />
+        <Label fx:id="locationLabel" layoutX="35.0" layoutY="203.0" text="Location:" />
+        <Label fx:id="zoneID" layoutX="28.0" layoutY="243.0">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <TextField fx:id="usernameTxtFld" layoutX="131.0" layoutY="105.0" prefHeight="26.0" prefWidth="239.0" promptText="Username*" />
+        <PasswordField fx:id="passwordTxtFld" layoutX="131.0" layoutY="145.0" prefHeight="26.0" prefWidth="239.0" promptText="Password*" />
+        <Button fx:id="loginBtn" layoutX="131.0" layoutY="185.0" mnemonicParsing="false" onAction="#loginHandler" prefHeight="26.0" prefWidth="239.0" style="-fx-background-color: cadetblue;" text="Login" />
+        <Button fx:id="createNewUserBtn" layoutX="131.0" layoutY="225.0" mnemonicParsing="false" onAction="#newUserHandler" prefHeight="26.0" prefWidth="239.0" style="-fx-background-color: goldenrod;" text="Create New User" />
+        <Button fx:id="exitBtn" layoutX="131.0" layoutY="265.0" mnemonicParsing="false" onAction="#exitHandler" prefHeight="26.0" prefWidth="239.0" style="-fx-background-color: slategrey;" text="Exit" />
+    </children>
+</AnchorPane>
